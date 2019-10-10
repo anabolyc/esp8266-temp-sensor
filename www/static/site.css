@@ -1,0 +1,52 @@
+* {
+    font-family: 'Roboto Mono', monospace; 
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.title, footer, footer a {
+    color: #999;
+}
+
+.sensor-box {
+    background-color: darkcyan;
+    margin: .5em;
+}
+
+.sensor-box div {
+    width: 100%;
+    color: #ccc;
+}
+
+.sensor-box .sensor-name {
+    padding: 10% 0;
+}
+
+.sensor-box .sensor-value {
+    font-size: 300%;
+    color: #eee;
+    padding: 0;
+}
+
+.sensor-box .sensor-time {
+    padding: 10% 0;
+}
+
+
+.nothing-to-show {
+    background-color: crimson;
+    padding: 15%;
+}
+
+.nothing-to-show .smile {
+    padding: 5% 0;
+    font-size: 300%;
+}
+
+.nothing-to-show .text {
+    padding: 20% 0;
+    font-size: 150%;
+}

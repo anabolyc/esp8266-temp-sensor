@@ -1,0 +1,19 @@
+{
+  "name": "esp8266-temp-sensor-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Andriy Malyshenko",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google-cloud/pubsub": "^1.1.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

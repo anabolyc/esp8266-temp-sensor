@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
+
+    <title>MY SENSORS</title>
+</head>
+
+<body>
+    <h1 class="title">MY SENSORS</h1>
+
+    <div class="container" ng-app="default-app" ng-controller="data-controller">
+        <div class="row">
+            <div class="col-sm sensor-box" ng-repeat="s in pub.state">
+                <div class="sensor-name">
+                    {{s.name}}
+                </div>
+                <div class="sensor-value">
+                    {{s.temp | number:1}} &deg;C
+                </div>
+                <div class="sensor-time">
+                    {{s.updated | date:'dd MMM HH:mm'}}
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="pub.state.length == 0">
+            <div class="col-sm sensor-box nothing-to-show">
+                <div class="smile">:-(</div>
+                <div calss="text">Sorry, nothing to show at that time</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner small">
+            <p>&copy; <a href="mailto:andriy@malyshenko.com">Malyshenko Andriy</a>, 2019</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
